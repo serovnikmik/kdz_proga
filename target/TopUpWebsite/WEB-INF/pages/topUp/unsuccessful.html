@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Unseccessful try</title>
+</head>
+<body>
+Your try to top up ur balance was unsuccessful(
+U don't have enough money on your bank account
+<p/>
+<a th:href="@{/topUp/{id}/balance(id=${id})}">
+    Go to balance page</a>
+<p/>
+<a th:href="@{/topUp/{id}/topUpQuantity(id=${id})}">
+    Go to quantity page</a>
+</body>
+</html>

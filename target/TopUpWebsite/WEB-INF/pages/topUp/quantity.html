@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/topUp/{id}/topUp(id=${id})}" th:object="${quantity}">
+    <label for="value">Enter how much You want to add: </label>
+    <div>
+        <input type="number" th:field="*{value}" id="value" placeholder="integer"/>
+            <div style="color:rebeccapurple"
+                 th:if="${#fields.hasErrors('value')}" th:errors="*{value}">Name error</div>
+        <input type="submit" value="Top up!"/>
+    </div>
+</form>
+
+</body>
+</html>

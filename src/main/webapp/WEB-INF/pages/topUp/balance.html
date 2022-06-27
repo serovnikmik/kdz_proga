@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Balance</title>
+</head>
+<body>
+
+<p th:text="${'Your balance is: ' + user.getBalance()}">VALUE</p>
+
+<a th:href="@{/topUp/{id}/topUpQuantity(id=${user.getId()})}">
+    Go to quantity page</a>
+
+<p/>
+
+<a th:href="@{/topUp/{id}/topUpInfo(id=${user.getId()})}">
+    See information about top up</a>
+
+</body>
+</html>
